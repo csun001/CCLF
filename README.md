@@ -1,6 +1,6 @@
-# A Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning
+# CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning
 
-This is the source code for the implementation of Paper ID 1866.
+
 
 ## Installation 
 
