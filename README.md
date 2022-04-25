@@ -57,7 +57,7 @@ A_LOSS - average loss of actor
 CR_LOSS - average loss of critic
 CU_LOSS - average loss of the CURL encoder
 ```
-We set the seeds from 360 to 365 and it depends on the GPU type and settings to reproduce the results.
+It depends on the GPU type and settings to reproduce the results.
 
 All data related to the run is stored in the specified `working_dir`. To enable model or video saving, use the `--save_model` or `--save_video` flags. For all available flags, inspect `train.py`. To visualize progress with tensorboard run:
 
