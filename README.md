@@ -1,6 +1,6 @@
-# CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning
+# CCLF: Contrastive-Curiosity-Driven Learning Framework
 
-This is the original PyTorch implementation of the "CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning" (accepted at IJCAI2022 under IJCAI-ECAI 2022) on SAC for the DeepMind control experiments. Our implementation is based on [CURL](https://github.com/MishaLaskin/curl) and [DrQ](https://github.com/denisyarats/drq).
+This is the original PyTorch implementation of CCLF on SAC for the DeepMind control experiments, from the paper "CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning" (accepted at IJCAI 2022 under IJCAI-ECAI 2022). Our implementation is based on [CURL](https://github.com/MishaLaskin/curl) and [DrQ](https://github.com/denisyarats/drq).
 
 
 
