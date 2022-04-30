@@ -16,7 +16,7 @@ import utils
 from logger import Logger
 from video import VideoRecorder
 
-from curiosity_sac import CuriositySacAgent
+from CCLF_sac import CCLFSacAgent
 from torchvision import transforms
 
 
@@ -33,7 +33,7 @@ def parse_args():
     # replay buffer
     parser.add_argument('--replay_buffer_capacity', default=100000, type=int)
     # train
-    parser.add_argument('--agent', default='curiosity_sac', type=str)
+    parser.add_argument('--agent', default='CCLF_sac', type=str)
     parser.add_argument('--init_steps', default=1000, type=int)
     parser.add_argument('--num_train_steps', default=1000000, type=int)
     parser.add_argument('--batch_size', default=32, type=int)
@@ -125,8 +125,8 @@ def evaluate(env, agent, video, num_episodes, L, step, args):
 
 
 def make_agent(obs_shape, action_shape, args, device):
-    if args.agent == 'curiosity_sac':
-        return CuriositySacAgent(
+    if args.agent == 'CCLF_sac':
+        return CCLFSacAgent(
             obs_shape=obs_shape,
             action_shape=action_shape,
             device=device,
