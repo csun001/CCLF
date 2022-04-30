@@ -1,5 +1,13 @@
 # CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning
 
+This is the original PyTorch implementation of the "CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning" (accepted at IJCAI2022 under IJCAI-ECAI 2022) on SAC for the DeepMind control experiments. Our implementation is based on [CURL](https://github.com/MishaLaskin/curl) and [DrQ](https://github.com/denisyarats/drq).
+
+
+
+## Citation
+
+If you find this code helpful in your research, please consider citing the paper as follows
+
 
 
 ## Installation 
@@ -27,19 +35,19 @@ CUDA_VISIBLE_DEVICES=0 python -u train.py \
 In your console, you should see printouts that look like:
 
 ```
-| [32meval[0m | S: 0 | ER: 18.7675
-| [33mtrain[0m | E: 1 | S: 500 | D: 0.4 s | R: 0.0000 | BR: 0.0000 | A_LOSS: 0.0000 | CR_LOSS: 0.0000 | CU_LOSS: 0.0000
-| [33mtrain[0m | E: 5 | S: 1000 | D: 0.4 s | R: 136.0366 | BR: 0.0000 | A_LOSS: 0.0000 | CR_LOSS: 0.0000 | CU_LOSS: 0.0000
-| [33mtrain[0m | E: 9 | S: 1250 | D: 0.0 s | R: 178.2814 | BR: 1.0437 | A_LOSS: -1.6998 | CR_LOSS: 2.8796 | CU_LOSS: 5.6792
-| [32meval[0m | S: 1250 | ER: 35.0508
-| [33mtrain[0m | E: 0 | S: 1500 | D: 94.5 s | R: 0.0000 | BR: 1.0712 | A_LOSS: -3.6507 | CR_LOSS: 2.1011 | CU_LOSS: 4.1821
-| [33mtrain[0m | E: 13 | S: 2000 | D: 96.0 s | R: 183.0705 | BR: 1.0965 | A_LOSS: -5.4314 | CR_LOSS: 2.1541 | CU_LOSS: 2.9452
-| [33mtrain[0m | E: 17 | S: 2500 | D: 0.0 s | R: 55.8144 | BR: 1.0339 | A_LOSS: -7.6148 | CR_LOSS: 2.4689 | CU_LOSS: 2.5492
-| [32meval[0m | S: 2500 | ER: 254.8489
-| [33mtrain[0m | E: 0 | S: 2500 | D: 107.1 s | R: 0.0000 | BR: 0.0000 | A_LOSS: 0.0000 | CR_LOSS: 0.0000 | CU_LOSS: 0.0000
-| [33mtrain[0m | E: 21 | S: 3000 | D: 97.5 s | R: 217.0974 | BR: 1.1880 | A_LOSS: -9.9664 | CR_LOSS: 4.7985 | CU_LOSS: 2.7503
-| [33mtrain[0m | E: 25 | S: 3500 | D: 94.6 s | R: 180.9111 | BR: 1.2755 | A_LOSS: -13.0526 | CR_LOSS: 5.4130 | CU_LOSS: 2.7915
-| [33mtrain[0m | E: 29 | S: 3750 | D: 0.0 s | R: 211.9625 | BR: 1.2483 | A_LOSS: -15.4376 | CR_LOSS: 4.8176 | CU_LOSS: 2.8847
+| eval | S: 0 | ER: 18.7675
+| train | E: 1 | S: 500 | D: 0.4 s | R: 0.0000 | BR: 0.0000 | A_LOSS: 0.0000 | CR_LOSS: 0.0000 | CU_LOSS: 0.0000
+| train | E: 5 | S: 1000 | D: 0.4 s | R: 136.0366 | BR: 0.0000 | A_LOSS: 0.0000 | CR_LOSS: 0.0000 | CU_LOSS: 0.0000
+| train | E: 9 | S: 1250 | D: 0.0 s | R: 178.2814 | BR: 1.0437 | A_LOSS: -1.6998 | CR_LOSS: 2.8796 | CU_LOSS: 5.6792
+| eval | S: 1250 | ER: 35.0508
+| train | E: 0 | S: 1500 | D: 94.5 s | R: 0.0000 | BR: 1.0712 | A_LOSS: -3.6507 | CR_LOSS: 2.1011 | CU_LOSS: 4.1821
+| train | E: 13 | S: 2000 | D: 96.0 s | R: 183.0705 | BR: 1.0965 | A_LOSS: -5.4314 | CR_LOSS: 2.1541 | CU_LOSS: 2.9452
+| train | E: 17 | S: 2500 | D: 0.0 s | R: 55.8144 | BR: 1.0339 | A_LOSS: -7.6148 | CR_LOSS: 2.4689 | CU_LOSS: 2.5492
+| eval | S: 2500 | ER: 254.8489
+| train | E: 0 | S: 2500 | D: 107.1 s | R: 0.0000 | BR: 0.0000 | A_LOSS: 0.0000 | CR_LOSS: 0.0000 | CU_LOSS: 0.0000
+| train | E: 21 | S: 3000 | D: 97.5 s | R: 217.0974 | BR: 1.1880 | A_LOSS: -9.9664 | CR_LOSS: 4.7985 | CU_LOSS: 2.7503
+| train | E: 25 | S: 3500 | D: 94.6 s | R: 180.9111 | BR: 1.2755 | A_LOSS: -13.0526 | CR_LOSS: 5.4130 | CU_LOSS: 2.7915
+| train | E: 29 | S: 3750 | D: 0.0 s | R: 211.9625 | BR: 1.2483 | A_LOSS: -15.4376 | CR_LOSS: 4.8176 | CU_LOSS: 2.8847
 ```
 
 For reference, the maximum score for cartpole swing up is around 860 pts, so our framework has converged to the optimal score. This takes about an a couple hours of training depending on your GPU. 
@@ -57,7 +65,6 @@ A_LOSS - average loss of actor
 CR_LOSS - average loss of critic
 CU_LOSS - average loss of the CURL encoder
 ```
-It depends on the GPU type and settings to reproduce the results.
 
 All data related to the run is stored in the specified `working_dir`. To enable model or video saving, use the `--save_model` or `--save_video` flags. For all available flags, inspect `train.py`. To visualize progress with tensorboard run:
 
@@ -68,3 +75,5 @@ tensorboard --logdir log --port 6006
 and go to `localhost:6006` in your browser. If you're running headlessly, try port forwarding with ssh. 
 
 For GPU accelerated rendering, make sure EGL is installed on your machine and set `export MUJOCO_GL=egl`. For environment troubleshooting issues, see the DeepMind control documentation.
+
+
