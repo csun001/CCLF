@@ -2,7 +2,7 @@
 
 This is the original PyTorch implementation of CCLF on SAC for the DeepMind control experiments, from the paper "CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning" (accepted at IJCAI 2022 under IJCAI-ECAI 2022). Our implementation is based on [CURL](https://github.com/MishaLaskin/curl) and [DrQ](https://github.com/denisyarats/drq).
 
-![This is an image](tmp/CCLF_workflow.pdf)
+![This is an image](tmp/CCLF.png)
 
 ## Citation
 
