@@ -30,7 +30,7 @@ conda env create -f conda_env.yml
 ## Instructions
 To train a curious agent on the `cartpole swingup` task from image-based observations run `bash script/run.sh` from the root of this directory. The `run.sh` file contains the following command, which you can modify to try different environments / hyperparamters.
 ```
-CUDA_VISIBLE_DEVICES=0 python -u train.py \
+python -u train.py \
     --domain_name cartpole \
     --task_name swingup \
     --encoder_type pixel \
