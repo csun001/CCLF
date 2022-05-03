@@ -7,7 +7,16 @@ This is the original PyTorch implementation of CCLF on SAC for the DeepMind cont
 ## Citation
 
 If you find this code helpful in your research, please consider citing the paper as follows
-
+```
+@misc{sun2022cclf,
+      title={CCLF: A Contrastive-Curiosity-Driven Learning Framework for Sample-Efficient Reinforcement Learning}, 
+      author={Chenyu Sun and Hangwei Qian and Chunyan Miao},
+      year={2022},
+      eprint={2205.00943},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 
 ## Installation 
